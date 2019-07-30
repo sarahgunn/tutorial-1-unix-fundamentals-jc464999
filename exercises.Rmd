@@ -1,0 +1,129 @@
+---
+title: "Unix Fundamentals - Exercises"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Question 1:** Enter a command to display your current working directory
+
+```{bash question_ub01}
+#Your answer here
+```
+
+
+```{bash test_ub01}
+bash test.sh ub01
+```
+
+**Question 2:** Use the `ls` command to list the contents of the directory `/bin`.  Your command must work from any starting directory
+
+```{bash question_ub02}
+#Your answer here
+```
+
+```{bash test_ub02}
+bash test.sh ub02
+```
+
+**Question 3:** Type a command that will always print the absolute path to your home directory. Your command must work from any starting directory
+
+```{bash question_ub03}
+#Your answer here
+```
+
+```{bash test_ub03}
+bash test.sh ub03
+```
+
+**Question 4:** Type a command that will print the absolute path to the `ls` program on your system?
+
+```{bash question_ub04}
+#Your answer here
+```
+
+```{bash test_ub04}
+bash test.sh ub04
+```
+
+**Question 5:** Enter a command to make a directory called `learn`. Your command must work even if the directory `learn` already exists
+
+```{bash question_ub05}
+#Your answer here
+```
+
+```{bash test_ub05}
+bash test.sh ub05
+```
+
+**Question 6:** Enter commands to make a directory called `learn` and then make two more directories inside the `learn` directory called `protein` and `nucleotide`.
+
+```{bash question_ub06}
+#Your answer here
+```
+
+```{bash test_ub06}
+bash test.sh ub06
+```
+
+## Working with sequence data
+
+**Question 07:** Use the `ls` command in combination with [a glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)) to list all protein sequences (and only protein sequences) in the `data` directory
+
+*Note:* Your answer should be composed assuming that your current directory is the directory that contains `data`.  Do not `cd` into data. So for example a command to list a single AA file would be `ls data/Baboon_AA.fasta`.
+
+```{bash question_ub07 , eval = FALSE}
+#Your answer here
+```
+
+```{bash test_ub07}
+bash test.sh ub07
+```
+
+**Question 08:** This question requires you to combine the skills you learned in questions 6 and 7. Write a command that does the following;
+
+1. Creates a directory structure exactly as required for Question 6
+2. Copies all protein sequences in the `data` directory to `learn/protein` and all nucleotide sequences to `learn/nucleotide`
+
+Note that you will need to do this using several commands. You can put each on a separate line in your answer.  
+
+```{bash question_ub08}
+#Your answer here
+```
+
+```{bash test_ub08}
+bash test.sh ub08
+```
+
+**Question 09:** Write a command to do the following;
+
+1. Create a directory called `learn` (see Question 05)
+2. Concatenate all protein sequences into a single file called `primates.fasta` inside the `learn` directory (ie it should be at the path `learn/primates_AA.fasta`)
+
+*Hint:* The `cat` command can be used to concatenate files
+*Hint:* The `cat` command works with shell globs
+*Hint:* The redirection operator, `>` can be used to redirect output to a file instead of printing it to the screen
+
+```{bash question_ub09}
+#Your answer here
+```
+
+```{bash test_ub09}
+bash test.sh ub09
+```
+
+**Question 10:** Write a command that prints the total number of protein sequences in the `data` directory
+
+```{bash question_ub10}
+#Your answer here
+```
+
+```{bash test_ub10}
+bash test.sh ub10
+```
+
+
+
+
