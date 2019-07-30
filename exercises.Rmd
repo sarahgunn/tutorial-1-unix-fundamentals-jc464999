@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 **Question 1:** Enter a command to display your current working directory
 
 ```{bash question_ub01}
-#Your answer here
+pwd
 ```
 
 
@@ -21,7 +21,7 @@ bash test.sh ub01
 **Question 2:** Use the `ls` command to list the contents of the directory `/bin`.  Your command must work from any starting directory
 
 ```{bash question_ub02}
-#Your answer here
+ls /bin
 ```
 
 ```{bash test_ub02}
@@ -31,7 +31,8 @@ bash test.sh ub02
 **Question 3:** Type a command that will always print the absolute path to your home directory. Your command must work from any starting directory
 
 ```{bash question_ub03}
-#Your answer here
+cd ~
+pwd 
 ```
 
 ```{bash test_ub03}
@@ -41,7 +42,7 @@ bash test.sh ub03
 **Question 4:** Type a command that will print the absolute path to the `ls` program on your system?
 
 ```{bash question_ub04}
-#Your answer here
+which ls
 ```
 
 ```{bash test_ub04}
@@ -51,7 +52,7 @@ bash test.sh ub04
 **Question 5:** Enter a command to make a directory called `learn`. Your command must work even if the directory `learn` already exists
 
 ```{bash question_ub05}
-#Your answer here
+mkdir -p learn
 ```
 
 ```{bash test_ub05}
@@ -61,7 +62,7 @@ bash test.sh ub05
 **Question 6:** Enter commands to make a directory called `learn` and then make two more directories inside the `learn` directory called `protein` and `nucleotide`.
 
 ```{bash question_ub06}
-#Your answer here
+mkdir -p learn/protein learn/nucleotide
 ```
 
 ```{bash test_ub06}
@@ -75,7 +76,7 @@ bash test.sh ub06
 *Note:* Your answer should be composed assuming that your current directory is the directory that contains `data`.  Do not `cd` into data. So for example a command to list a single AA file would be `ls data/Baboon_AA.fasta`.
 
 ```{bash question_ub07 , eval = FALSE}
-#Your answer here
+ls data/*AA.fasta
 ```
 
 ```{bash test_ub07}
@@ -90,7 +91,9 @@ bash test.sh ub07
 Note that you will need to do this using several commands. You can put each on a separate line in your answer.  
 
 ```{bash question_ub08}
-#Your answer here
+mkdir -p learn/protein learn/nucleotide
+cp data/*AA.fasta learn/protein
+cp data/*NA.fasta learn/nucleotide
 ```
 
 ```{bash test_ub08}
@@ -107,7 +110,8 @@ bash test.sh ub08
 *Hint:* The redirection operator, `>` can be used to redirect output to a file instead of printing it to the screen
 
 ```{bash question_ub09}
-#Your answer here
+mkdir -p learn
+cat data/*AA.fasta > learn/primates_AA.fasta
 ```
 
 ```{bash test_ub09}
@@ -117,7 +121,7 @@ bash test.sh ub09
 **Question 10:** Write a command that prints the total number of protein sequences in the `data` directory
 
 ```{bash question_ub10}
-#Your answer here
+ls data/*AA.fasta | wc -l
 ```
 
 ```{bash test_ub10}
